@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KlabArrayAssignment</title>
+</head>
+<body>
+    
+    <div id="Arrays"></div>
+
+    <script>
+        
+        const projects = [
+
+            {
+                Project____Name: "SocialHub",
+                description: "A social media app for  sharing posts.",
+                technologyUsed: ["Flutter", "Firebase"],
+                year: 2024
+            },
+            {
+                Project_Name: "E-Commerce Platform",
+                description: "An online shopping website.",
+                technologyUsed: ["React", "Node.js", "MongoDB"],
+                year: 2023
+            },
+            
+            {
+                Project_Name: "Portfolio Website",
+                description: "A personal portfolio website.",
+                technologyUsed: ["HTML", "CSS", "JavaScript"],
+                year: 2022
+            },
+        ];
+
+        
+        const projectDetails = projects.map(project => {
+            return `
+                <div>
+                    <p><strong>Project Name:</strong> ${project.Project_Name}</p>
+                    <p><strong>Description:</strong> ${project.description}</p>
+                    <p><strong>Technologies Used:</strong> ${project.technologyUsed.join(", ")}</p>
+                    <p><strong>Year:</strong> ${project.year}</p>
+                </div>
+                <hr>
+            `;
+        });
+
+       
+        document.getElementById("Arrays").innerHTML = projectDetails.join("");
+    </script>
+
+</body>
+</html>
